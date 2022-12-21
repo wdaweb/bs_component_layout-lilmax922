@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Naruto-Layout</title>
+  <style>
+    /* carousel -------------------------------------------- */
+    * {
+      transition: 1s;
+    }
+
+    #Naruto .carousel-item img {
+      object-fit: cover;
+    }
+
+    @media(min-width:576px) {
+      #NarutoCarousel {
+        height: calc(40vh + 10vw);
+      }
+
+      #Naruto.carousel {
+        height: 100%;
+      }
+
+      #Naruto .carousel-inner {
+        height: 100%;
+      }
+
+      #Naruto .carousel-item {
+        height: 100%;
+      }
+
+      #Naruto .carousel-item img {
+        height: 100% !important;
+      }
+    }
+
+    @media (min-width:992px) {
+      #NarutoCarousel {
+        height: 100vh;
+      }
+    }
+
+    /* cards -------------------------------------------- */
+  </style>
+</head>
+
+<body>
+  <!-- Nav-bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">火影忍者</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">TOP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">NEWS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                ANIME
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">NARUTO</a></li>
+                <li><a class="dropdown-item" href="#">NARUTO SHIPPUDEN</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                ABOUT NARUTO
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">STORY</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">NARUTO 20th anniversary</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- 輪播 -->
+  <div id="NarutoCarousel">
+    <div id="Naruto" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#Naruto" data-bs-slide-to="0" class="active"></button>
+        <button type=" button" data-bs-target="#Naruto" data-bs-slide-to="1"></button>
+        <button type=" button" data-bs-target="#Naruto" data-bs-slide-to="2"></button>
+        <button type=" button" data-bs-target="#Naruto" data-bs-slide-to="3"></button>
+        <button type=" button" data-bs-target="#Naruto" data-bs-slide-to="4"></button>
+      </div>
+      <!-- <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://naruto-official.com/special/20th/carousel_1.webp" class="d-block w-100 d-md-none">
+        </div>
+        <div class="carousel-item">
+          <img src="https://naruto-official.com/special/20th/carousel_2.webp" class="d-block w-100 d-md-none">
+        </div>
+        <div class="carousel-item">
+          <img src="https://naruto-official.com/special/20th/carousel_3.webp" class="d-block w-100 d-md-none">
+        </div>
+        <div class="carousel-item">
+          <img src="https://naruto-official.com/special/20th/carousel_4.webp" class="d-block w-100 d-md-none">
+        </div>
+      </div> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="https://images4.alphacoders.com/967/967234.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images3.alphacoders.com/727/727977.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images2.alphacoders.com/727/727982.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images4.alphacoders.com/101/1014355.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images.alphacoders.com/862/862990.jpg" class="d-block w-100">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#Naruto" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#Naruto" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="container mt-3 mt-md-5">
+    <div class="row">
+      <div class="col-md-4 d-flex justify-content-center mb-3">
+        <div class="card">
+          <img
+            src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/11/28/jDNRUU9OBcQrane5/サムネイル画像②.jpg?_=44c14b273ee29b1ab63936d52badca4f"
+            class="card-img-top">
+          <div class="card-body">
+            <p class="card-title" style="font-size:12px;">2022-12-08</p>
+            <p class="card-text" style="font-weight:bold;">アニメ『NARUTO-ナルト-』20周年記念！『NARUTO-ナルト- 疾風伝』アニメイトフェアの開催が決定！</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-3">
+        <div class="card">
+          <img
+            src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/11/29/AHIGaeqLJv1HBjyJ/007.jpg?_=44c14b273ee29b1ab63936d52badca4f"
+            class="card-img-top">
+          <div class="card-body">
+            <p class="card-title" style="font-size:12px;">2022-12-05</p>
+            <p class="card-text" style="font-weight:bold;">アプリ『NARUTO X BORUTO 忍者BORUTAGE』でうずまきナルト(七代目火影重粒子モード)
+              ＆うちはサスケ(ジゲン・イッシキ戦) の新忍録札が登場！</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-3">
+        <div class="card">
+          <img
+            src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/jp/news/2022/09/22/l7zESKy6wmshKFEd/001.jpg?_=310be113613ef4f2fd06127cfd477460"
+            class="card-img-top">
+          <div class="card-body">
+            <p class="card-title" style="font-size:12px;">2022-10-03</p>
+            <p class="card-text" style="font-weight:bold;">NARUTO THE GALLERY 入場券販売中!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards w/ button -->
+  <div class="container-fluid p-0 mt-5">
+    <div class="card text-center">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="https://naruto-official.com/anime/series/naruto1_visual.webp" class="card-img-top img-fluid"
+            style="object-fit:cover;">
+        </div>
+        <div class="col-md-6 d-flex align-items-center" style="background-color:#eee;">
+          <div class="card-body">
+            <img class="card-title mb-5" style="width:70%; height:30%;"
+              src="https://naruto-official.com/anime/series/naruto1_logo_ja_pc.webp">
+            <p class="card-text mb-5 fw-bold text-start">
+              12年前、木叶忍者村を襲った伝説の獣である「九尾の妖狐」。当時の火影は自分の命を捨てて、九尾を新生児の漩渦鳴人の身体に封印した。<br>
+              村の人々は第4代火影を英雄として、九尾を封印した鳴人を妖狐の化身として見ないで、第4代火影が望むように「妖狐の封印の英雄」として見ることができなかった。そのため、鳴人は小さい頃から「怪物」として見られて孤立してきた。伊魯卡先生が子供の頃の思いを思い出すように、「バカにされるよりも透明人にされる方がまし」と鳴人は、他の人の注意を引くためにいたずらをするようになった。しかし、忍者学校の卒業試験に合格し、伊魯卡先生が彼を最初に認めた人となったことで、その状況は徐々に変化し、「火影」を目標に努力するようになり、すべての人々が彼の存在を認めるようになった。
+            </p>
+            <a href="#" class="btn text-white" style="background-color:rgb(231, 192, 108);">查看更多</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center">
+      <div class="row g-0">
+        <div class="col-md-6 d-md-none">
+          <img src="https://naruto-official.com/anime/series/naruto2_visual.webp" class="card-img-top img-fluid">
+        </div>
+        <div class="col-md-6 d-flex align-items-center" style="background-color:#eee;">
+          <div class="card-body">
+            <img class="card-title mb-5" style="width:70%; height:30%;"
+              src="https://naruto-official.com/anime/series/naruto2_logo_ja_pc.webp">
+            <p class="card-text mb-5 fw-bold text-start">あの終末の谷の激闘から約二年半――。<br>
+              自来也との修業の旅を終えて久し振りに里に戻ったナルトを待っていたのは、医療忍者として頼もしく成長したサクラと相変わらずのカカシ。そして成長を遂げたかつての仲間達だった。しかし再会の喜びもつかの間、木ノ葉に衝撃の報せが入る。砂隠れの風影となった我愛羅が“暁”に連れ去られたのだ！<br>
+              動き出した“暁”の目的は全ての尾獣を狩ること。
+              同じ苦しみをもつ人柱力として我愛羅の身を案じ、憤るナルトは綱手の命のもとサクラ、カカシと共に三人一組を結成！ 我愛羅救出の任に赴く。<br>
+              圧倒的な力をもつ“暁”との対決の行方は！？
+              そして大蛇丸転生の準備が整いつつあるサスケの運命は！？ ナルトの戦いが新たなる風を巻き起こす！</p>
+            <a href="#" class="btn text-white" style="background-color:rgb(231, 192, 108);">查看更多</a>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+          <img src="https://naruto-official.com/anime/series/naruto2_visual.webp" class="card-img-top img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map --------------------------------------------------- -->
+  <div class="container-fluid p-0">
+    <div class="ratio ratio-16x9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.1299217177425!2d135.00241401744384!3d34.57557900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000833e8baefd93%3A0xaabdac8aa7d083c!2sNaruto%20x%20Boruto%20park%20Nijigen%20no%20mori!5e0!3m2!1szh-TW!2stw!4v1670676450196!5m2!1szh-TW!2stw"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- contact ------------------------------------------------ -->
+  <div class="container-fluid w-100" style="background-color:#eee;">
+    <div class="row">
+      <div class="col-12 p-5 text-center">
+        <h1 class="pb-3">聯絡我們</h1>
+        <p>任何服務問題或建議，歡迎填寫下列表單告知我們，謝謝!</p>
+      </div>
+      <!-- form ---------------------------------------------- -->
+      <div class="col-12 col-md-6 mb-3">
+        <h4>姓名</h4>
+        <div class="input-group">
+          <div class="form-floating">
+            <input type="text" id="name" class="form-control" placeholder="請輸入姓名">
+            <label for="name">請輸入姓名</label>
+          </div>
+          <div class="input-group-text">
+            <input class="form-check-input mt-0" type="radio" name="gender" value="male" style="transition:none;">
+            <label class="form-check-label" for="male">男士</label>
+          </div>
+          <div class="input-group-text">
+            <input class="form-check-input mt-0" type="radio" name="gender" value="female" style="transition:none;">
+            <label class="form-check-label" for="female">女士</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <h4>連絡電話</h4>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="phoneNumber">
+          <label for="floatingInput">輸入您的連絡電話(手機/市話)</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <h4>電子信箱</h4>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">輸入您的E-mail</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <h4>服務項目</h4>
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect">
+            <option selected>請選擇要查詢的項目</option>
+            <option value="1">活動地點</option>
+            <option value="2">周邊相關</option>
+            <option value="3">遊戲相關</option>
+          </select>
+          <label for="floatingSelect">服務項目</label>
+        </div>
+      </div>
+      <div class="col-12 mb-3">
+        <h4>建議我們</h4>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+            style="height: 100px"></textarea>
+          <label for="floatingTextarea">您的建議，讓我們變得更好!</label>
+        </div>
+      </div>
+      <div class="col-12 mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="transition:none;">
+          <label class="form-check-label" for="flexCheckDefault">
+            訂閱獲得最新情報!
+          </label>
+        </div>
+      </div>
+      <div class="col-12 mb-3 text-center">
+        <button class="btn text-white" style="background-color:rgb(231, 192, 108);" type="submit">送出</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-dark text-light">
+    <div class="row">
+      <div class="col-6 col-md-3 mt-3 text-center">
+        <img src="https://naruto-official.com/special/20th/logo-20th.webp" class="rounded-circle"
+          style="width:200px;height:200px;">
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+        <p><b>Address</b></p>
+        <p>Naruto x Boruto park Nijigen no mori</p>
+        <p>2425番2号 Kusumoto, Awaji, Hyogo 656-2301日本</p>
+        <p>〒656-2301 兵庫県淡路市楠本2425番2号</p>
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+        <p><b>Links</b></p>
+        <p>https://naruto-official.com/en</p>
+        <p>Website builder</p>
+        <p>Download for Windows</p>
+        <p>Download for Mac</p>
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+        <p><b>Contacts</b></p>
+        <p class="text-break">E-mail:Naruto@gmail.com</p>
+        <p>Phone:+1 (0)000 0000 001</p>
+        <p>Fax:+1 (0) 000 0000 0020000</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center">&copy;Copyright 2022 Max Hu - All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
